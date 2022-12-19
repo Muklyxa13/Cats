@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./style.css">
+    <title>Cats</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="https://i.gifer.com/2iFb.gif" alt="кот на гифке">
+        <div class = "title">Элита среди шерстяных</div>
+        <button class="btn_show_addCat" type="submit">Добавить котика<img class="btn_img" src="https://www.google.com/logos/fnbx/animal_paws/cat_kp_dm.gif" alt="Добавить кота"></button>
+    </header>
+    <div class="border"></div>
+    <div class="container"></div>
+    <div class="modal">
+        <div class="modal-overlay"></div>
+        <div class="form__container">
+            <i class="fas fa-times"></i>
+            <form id="addCat" action="" method="post">
+                <div class="form__group">
+                    <label for="name">Имя</label>
+                    <input type="text" placeholder="Введите имя" name="name">
+                </div>
+                <div class="form__group">
+                    <label for="age">Возраст</label>
+                    <input type="number" placeholder="Введите возраст" name="age">
+                </div>
+                <div class="form__group">
+                    <label for="description">Описание</label>
+                    <input type="text" placeholder="Введите описание" name="description">
+                </div>
+                <div class="form__group">
+                    <label for="rate">Рейтинг</label>
+                    <input type="number" placeholder="Введите рейтинг" name="rate">
+                </div>
+                <div class="form__group">
+                    <label for="id">ID</label>
+                    <input name="id" type="number" placeholder="Введите id">
+                </div>
+                <div class="form__group">
+                    <label for="image">Ссылка на питомца</label>
+                    <input type="url" placeholder="Вставьте ссылку" name="image">
+                </div>
+                <div class="form__group-box">
+                    <label for="favorite">Любимчик?</label>
+                    <input type="checkbox" name="favorite" value="1">
+                </div>
+                <button type="submit" class="form__submit">Добавить</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal-two">
+        <div class="modal-overlay-two"></div>
+        <div class="modal_detail_cat"></div>
+    </div>
+    <div class="modal-three">
+        <div class="modal-overlay-three"></div>
+        <div class="modal_edit_cat">
+            <i class="fas fa-times editClosed"></i>
+            <form action="" id="edit">
+                <div class="editCat">
+                    <label for="age">Возраст</label>
+                    <input type="number" placeholder="Введите возраст" name="age">
+                </div>
+                <div class="editCat">
+                    <label for="description">Описание</label>
+                    <input type="text" placeholder="Введите описание" name="description">
+                </div>
+                <div class="editCat">
+                    <label for="rate">Рейтинг</label>
+                    <input type="number" placeholder="Введите рейтинг" name="rate">
+                </div>
+                <div class="editCat">
+                    <label for="image">Ссылка на питомца</label>
+                    <input type="url" placeholder="Вставьте ссылку" name="image">
+                </div>
+                <div class="editCat-box">
+                    <label for="favorite">Любимчик?</label>
+                    <input type="checkbox" name="favorite" value="1">
+                </div>
+                <input type="submit" class="edit_btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,436 @@
+body {
+    background-image: url(https://phonoteka.org/uploads/posts/2021-07/1625305550_10-phonoteka-org-p-oboi-na-rabochii-stol-minimalizm-kot-oboi-10.jpg);
+    background-size: cover;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-size: 100px;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: cursive;
+	padding-top: 10px;
+	text-align: center;
+    transition: 1s;
+    color: white;
+    -webkit-text-stroke: 2px black;
+}
+
+.title:hover {
+    transform: scale(1.1);
+    color: whitesmoke;
+}
+
+.border {
+    border: 1px solid rgb(255, 255, 255);
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.pet_image {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.pet_image:hover {
+    border: 2px solid black;
+}
+
+.pet_name {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.pet_rate {
+    color: rgba(0, 0, 0, .7);
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.pet_description {
+    color: rgba(0, 0, 0, .7);
+    margin-top: 5px;
+    width: 200px;
+}
+
+.pet {
+    font-family:cursive;
+    font-size: 0.9rem;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.form__container {
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid;
+    padding: 5px;
+    font-family: cursive;
+    color: white;
+}
+
+.form__group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__group label {
+    margin-bottom: 5px;
+}
+
+.form form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.form input {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.form__submit {
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 110px;
+    background-color: violet;
+    color: wheat;
+    font-family: cursive;
+}
+
+.form__submit:hover {
+    background-color: black;
+    color: wheat;
+}
+
+.btn_show_addCat {
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 20px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+    outline: none;
+}
+
+.btn_show_addCat:hover {
+    color: black;
+    -webkit-text-stroke: .3px white;
+    
+}
+
+.btn_img {
+    transform: rotate(180deg);
+}
+
+.btn-edit {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: brown;
+    color: wheat;
+    height: 30px;
+    /* width: 90px; */
+    font-family: cursive;
+    font-weight: bold;
+    outline: none;
+}
+
+.btn-edit:hover {
+    background-color: black;
+}
+
+.btn-detail {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: violet;
+    color: wheat;
+    height: 30px;
+    /* width: 90px; */
+    font-family: cursive;
+    font-weight: bold;
+    outline: none;
+}
+
+.btn-detail:hover {
+    background-color: black;
+}
+
+.btn-delete {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: teal;
+    color: wheat;
+    height: 30px;
+    /* width: 90px; */
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.btn-delete:hover {
+    background-color: black;
+}
+
+.modal {
+    display: none;
+}
+
+.modal-two {
+    display: none;
+}
+
+.modal-three {
+    display: none;
+}
+
+.modal-open {
+    display: block;
+}
+
+.modal-open-two {
+    display: block;
+}
+
+.modal-open-three {
+    display: block;
+}
+
+.modal-closed {
+    display: none;
+}
+
+.modal-closed-two {
+    display: none;
+}
+
+.modal-closed-three {
+    display: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-overlay-two {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-overlay-three {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.fa-times {
+    color: white;
+    position: absolute;
+    right: 2%;
+    cursor: pointer;
+}
+
+.fa-times-circle {
+    cursor: pointer;
+    color: black;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
+.modal_detail_cat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    max-width: 500px;
+    min-width: 400px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: wheat;
+}
+
+.modal_edit_cat {
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid;
+    padding: 5px;
+    font-family: cursive;
+    color: white;
+}
+
+.editCat {
+    display: grid;
+    gap: 5px;
+    text-align: left;
+}
+
+.editClosed {
+    color: white;
+    position: absolute;
+    right: 2%;
+    cursor: pointer;
+}
+
+.editCat-box {
+    display: flex;
+    align-items: end;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.edit_btn {
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 110px;
+    background-color: violet;
+    color: wheat;
+    font-family: cursive;
+    outline: none;
+}
+
+.edit_btn:hover {
+    background-color: black;
+    border: 1px solid white;
+}
+
+.img_detail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+.div_image_detail {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.id_detail {
+    font-family: cursive;
+    display: grid;
+    width: 300px;
+}
+
+.name_detail {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.rate_detail {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.description_detail {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.age_detail {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.favorite_detail {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.div_btn_detail {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.btn_detail {
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px;
+    color: wheat;
+    background-color: black;
+    outline: none;
+}
+
+.action_btn {
+    display: grid;
+    gap: 5px;
+    width: 150px;
+}
