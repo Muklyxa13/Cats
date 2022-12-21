@@ -171,7 +171,6 @@ header {
     background-color: brown;
     color: wheat;
     height: 30px;
-    /* width: 90px; */
     font-family: cursive;
     font-weight: bold;
     outline: none;
@@ -188,7 +187,6 @@ header {
     background-color: violet;
     color: wheat;
     height: 30px;
-    /* width: 90px; */
     font-family: cursive;
     font-weight: bold;
     outline: none;
@@ -205,7 +203,6 @@ header {
     background-color: teal;
     color: wheat;
     height: 30px;
-    /* width: 90px; */
     font-family: cursive;
     font-weight: bold;
 }
@@ -214,43 +211,19 @@ header {
     background-color: black;
 }
 
-.modal {
+.modal, .modal-two, .modal-three {
     display: none;
 }
 
-.modal-two {
-    display: none;
-}
-
-.modal-three {
-    display: none;
-}
-
-.modal-open {
+.modal-open, .modal-open-two, .modal-open-three {
     display: block;
 }
 
-.modal-open-two {
-    display: block;
-}
-
-.modal-open-three {
-    display: block;
-}
-
-.modal-closed {
+.modal-closed, .modal-closed-two, .modal-closed-three {
     display: none;
 }
 
-.modal-closed-two {
-    display: none;
-}
-
-.modal-closed-three {
-    display: none;
-}
-
-.modal-overlay {
+.modal-overlay, .modal-overlay-two, .modal-overlay-three {
     position: fixed;
     top: 0;
     left: 0;
@@ -259,25 +232,7 @@ header {
     background: rgba(0, 0, 0, 0.7);
 }
 
-.modal-overlay-two {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.modal-overlay-three {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.fa-times {
+.fa-times, .editClosed {
     color: white;
     position: absolute;
     right: 2%;
@@ -325,13 +280,6 @@ header {
     display: grid;
     gap: 5px;
     text-align: left;
-}
-
-.editClosed {
-    color: white;
-    position: absolute;
-    right: 2%;
-    cursor: pointer;
 }
 
 .editCat-box {
@@ -389,25 +337,7 @@ header {
     font-size: 20px;
 }
 
-.rate_detail {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 15px;
-}
-
-.description_detail {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 15px;
-}
-
-.age_detail {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 15px;
-}
-
-.favorite_detail {
+.rate_detail, .description_detail, .age_detail, .favorite_detail {
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 15px;

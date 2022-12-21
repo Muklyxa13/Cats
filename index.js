@@ -54,7 +54,7 @@ const getCatDetails = (cat) => `
         <p class = 'name_detail'>Отзывается на "${cat.name}"</p>
         <p class = 'rate_detail'>Рейтинг: <i class="fas fa-star"></i> <span class = 'span'>${cat.rate}</span></p>
         <p class = 'age_detail'>Возраст: <span class = 'span'>${cat.age}</span></p>
-        <p class = 'favorite_detail'>Любимчик: <span class = 'span'>${cat.favorite === true ? '<i class="fas fa-thumbs-up"></i>' : '<i class="fas fa-thumbs-down"></i>'}</span></p>
+        <p class = 'favorite_detail'>Любимчик: <span class = 'span'>${!!cat.favorite === true ? '<i class="fas fa-thumbs-up"></i>' : '<i class="fas fa-thumbs-down"></i>'}</span></p>
         <p class = 'description_detail'><span class = 'span'>${cat.description}</span></p>
     <div>
 `;
@@ -156,11 +156,27 @@ async function addCatFetch(data) {
         method: "POST",
         headers: {'Content-Type': 'application/json'},
         body: data,
+    }).then((res) => {
+        if (res.status === 200) {
+            // очищаем LS
+            LS.removeItem('formData')
+            addCat.reset()
+        }
     })
+    
 }
 
 const addCat = document.getElementById('addCat');
 addCat.addEventListener('submit', handleAddCatSubmit);
+
+// сохраняем данные в LS
+let formData = {};
+const LS = localStorage;
+
+addCat.addEventListener('change', () => {
+    formData[event.target.name] = event.target.value;
+    LS.setItem('formData', JSON.stringify(formData))
+})
 
 /*
 модалка добавления кота
@@ -172,10 +188,16 @@ const addCatBtn = document.querySelector('.btn_show_addCat');
 
 const modalClosed = () => {
     modal.classList.toggle('modal-open')
+    // восстанавливаем данные из LS
+    if (LS.getItem('formData')) {
+        formData = JSON.parse(LS.getItem('formData'))
+        for (let key in formData) {
+            addCat.elements[key].value = formData[key]
+        }
+    }   
 }
 
 addCatBtn.addEventListener('click', modalClosed)
-
 closeModal.addEventListener('click', modalClosed)
 
 modalOverlay.addEventListener('click', () => {
