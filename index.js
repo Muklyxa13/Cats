@@ -1,10 +1,31 @@
+const cats = document.querySelector('.container');
+
+// маленькая приколюха
+const body = document.querySelector('body')
+const header = document.querySelector('header');
+body.style.display = 'none';
+
+let video = document.querySelector('.full-screen__video')
+video.style.display = 'none'
+
+let pr = prompt('caps nickname', '')
+if (pr == 'Muklyxa13'.toUpperCase()) {
+    body.style.display = 'block'
+}
+else {
+    body.style.display = 'block'
+    header.style.display = 'none'
+    cats.style.display = 'none'
+    video.style.display = 'block'
+}
+
 /*
 за названия переменных сразу хочется извиниться, ибо не везде они отображают суть возможно xD
 */
 /*
 показать всех котов
 */
-const cats = document.querySelector('.container');
+
 
 const ACTIONS = {
     DETAIL: 'detail',
