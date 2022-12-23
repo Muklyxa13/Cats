@@ -26,7 +26,6 @@ else {
 показать всех котов
 */
 
-
 const ACTIONS = {
     DETAIL: 'detail',
     DELETE: 'delete',
@@ -209,6 +208,9 @@ const addCatBtn = document.querySelector('.btn_show_addCat');
 
 const modalClosed = () => {
     modal.classList.toggle('modal-open')
+    modal.classList.toggle('fadeIn')
+    modal.classList.remove('fadeOut')
+    modal.style.display = 'block'
     // восстанавливаем данные из LS
     if (LS.getItem('formData')) {
         formData = JSON.parse(LS.getItem('formData'))
@@ -219,10 +221,26 @@ const modalClosed = () => {
 }
 
 addCatBtn.addEventListener('click', modalClosed)
-closeModal.addEventListener('click', modalClosed)
+
+const modalSubmitAddCat = () => {
+    modal.classList.toggle('modal-open')
+    modal.classList.toggle('fadeIn')
+    modal.classList.add('fadeOut')
+    modal.style.display = 'block'
+}
+
+closeModal.addEventListener('click', () => {
+    modal.classList.toggle('modal-open')
+    modal.classList.toggle('fadeIn')
+    modal.classList.add('fadeOut')
+    modal.style.display = 'block'
+})
 
 modalOverlay.addEventListener('click', () => {
     modal.classList.remove('modal-open')
+    modal.classList.remove('fadeIn')
+    modal.classList.add('fadeOut')
+    modal.style.display = 'block'
 })
 
 document.addEventListener('keyup', (e) => {
@@ -230,10 +248,16 @@ document.addEventListener('keyup', (e) => {
         modal.classList.remove('modal-open')
         modalTwo.classList.remove('modal-open-two')
         modalThree.classList.remove('modal-open-three')
+        modal.classList.remove('fadeIn')
+        modal.classList.add('fadeOut')
+        modalTwo.classList.remove('fadeIn')
+        modalTwo.classList.add('fadeOut')
+        modalThree.classList.remove('fadeIn')
+        modalThree.classList.add('fadeOut')
     }
 })
 
-document.querySelector('.form__submit').addEventListener('click', modalClosed)
+document.querySelector('.form__submit').addEventListener('click', modalSubmitAddCat)
 
 /*
 модалка описания кота
@@ -244,14 +268,23 @@ const modalOverlayTwo = document.querySelector('.modal-overlay-two');
 
 const modalClosedTwo = () => {
     modalTwo.classList.toggle('modal-open-two')
+    modalTwo.classList.toggle('fadeIn')
+    modalTwo.classList.add('fadeOut')
+    modalTwo.style.display = 'block'
 }
 
 modalOverlayTwo.addEventListener('click', () => {
     modalTwo.classList.remove('modal-open-two')
+    modalTwo.classList.remove('fadeIn')
+    modalTwo.classList.add('fadeOut')
+    modalTwo.style.display = 'block'
 })
 
 const modalClosedDetails = () => {
     modalTwo.classList.toggle('modal-open-two')
+    modalTwo.classList.toggle('fadeIn')
+    modalTwo.classList.remove('fadeOut')
+    modalTwo.style.display = 'block'
 }
 
 /*
@@ -263,14 +296,23 @@ const modalOverlayThree = document.querySelector('.modal-overlay-three');
 
 const modalClosedThree = () => {
     modalThree.classList.toggle('modal-open-three')
+    modalThree.classList.toggle('fadeIn')
+    modalThree.classList.add('fadeOut')
+    modalThree.style.display = 'block'
 }
 
 modalOverlayThree.addEventListener('click', () => {
     modalThree.classList.remove('modal-open-three')
+    modalThree.classList.remove('fadeIn')
+    modalThree.classList.add('fadeOut')
+    modalThree.style.display = 'block'
 })
 
 const modalClosedEdit = () => {
     modalThree.classList.toggle('modal-open-three')
+    modalThree.classList.toggle('fadeIn')
+    modalThree.classList.remove('fadeOut')
+    modalThree.style.display = 'block'
 }
 
 document.querySelector('.edit_btn').addEventListener('click', modalClosedThree)
